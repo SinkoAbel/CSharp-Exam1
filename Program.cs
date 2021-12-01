@@ -36,13 +36,11 @@ namespace _3.feladat
             List<byte> vizsgaJegyek = new List<byte>();
             float atlag;
             byte egyesekSzama = 0;
-            byte beJegy;    // nem lehet értékként 0-t megadni neki mert akkor az lenne a lista első eleme
+            byte beJegy;    
             string temp;
 
             do
-            {
-                
-                                  
+            {                                 
                 Console.Write("Adja meg a Magasszintű programozásból elért jegyeit: ");
                 temp = Console.ReadLine();
 
@@ -62,16 +60,9 @@ namespace _3.feladat
                 if (beJegy == 1)
                     egyesekSzama++;
 
-                
 
             } while (!byte.TryParse(temp, out beJegy) || beJegy < 1 || beJegy > 5 || vizsgaJegyek.Count < 5);
 
-
-            // Lista ellenőrzése
-            for (int i = 0; i < vizsgaJegyek.Count; i++)
-            {
-                Console.WriteLine(vizsgaJegyek[i]);
-            } 
 
             Console.WriteLine();
 
